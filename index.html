@@ -9,37 +9,50 @@
     <script src="https://kit.fontawesome.com/ba1e04a511.js" crossorigin="anonymous"></script>
 </head>
 <body class="font-sans bg-gray-100">
-    <!-- Header Section -->
-    <header class="bg-blue-900 text-white py-4 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="flex items-center space-x-2">
-                <i class="fa-solid fa-language text-3xl"></i>
-                <span class="text-2xl font-bold">NextGen Language Institute</span>
-            </div>
-            <nav class="hidden md:flex space-x-6" id="navItems">
-                <a href="#home" class="hover:text-yellow-400">Home</a>
-                <a href="#courses" class="hover:text-yellow-400">Courses</a>
-                <a href="#about" class="hover:text-yellow-400">About Us</a>
-                <a href="#testimonials" class="hover:text-yellow-400">Testimonials</a>
-                <a href="#contact" class="hover:text-yellow-400">Contact Us</a>
-            </nav>
-            <div class="md:hidden">
-                <i class="fa-solid fa-bars text-2xl cursor-pointer" id="hamburgerIcon" onclick="showMenu()"></i>
-            </div>
-        </div>
-    </header>
+<!-- Header Section -->
+<header class="bg-blue-900 text-white py-4 sticky top-0 z-50 shadow-md">
+  <div class="container mx-auto flex justify-between items-center px-4">
+    
+    <!-- Logo and Motto -->
+    <div class="flex flex-col">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-language text-3xl"></i>
+        <span class="text-2xl font-bold">NextGen Language Institute</span>
+      </div>
+      <p class="text-sm mr-10 text-white mt-">
+        Every language is a new adventure
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="hidden md:flex space-x-6" id="navItems">
+      <a href="#home" class="hover:text-yellow-400">Home</a>
+      <a href="#program" class="hover:text-yellow-400">Courses</a>
+      <a href="#about" class="hover:text-yellow-400">About Us</a>
+      <a href="#testimonials" class="hover:text-yellow-400">Testimonials</a>
+      <a href="#contact" class="hover:text-yellow-400">Contact Us</a>
+    </nav>
+
+    <!-- Mobile Menu Icon -->
+    <div class="md:hidden">
+      <i class="fa-solid fa-bars text-2xl cursor-pointer" id="hamburgerIcon" onclick="showMenu()"></i>
+    </div>
+
+  </div>
+</header>
+
 
     <!-- Hero Section -->
     <section id="home" class="bg-cover bg-center h-screen text-white flex items-center" style="background-image: url('img/hero2.png')">
         <div class="container mx-auto px-4 text-center bg-blue-900 bg-opacity-50 py-10 rounded-lg">
             <h1 class="text-4xl md:text-6xl font-bold mb-4">Learn Languages, Embrace Cultures</h1>
-            <p class="text-lg md:text-xl mb-6">Master French, Spanish, Swahili, English, and more with expert tutors in the heart of Nairobi.</p>
+            <p class="text-lg md:text-xl mb-6">Master French, Spanish, Swahili, English, and more with expert tutors from around the world.</p>
             <a href="#contact" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-500">Enroll Now</a>
         </div>
     </section>
 
     <!-- Courses Section -->
-    <section id="courses" class="py-16 bg-white">
+    <!-- <section id="courses" class="py-16 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Language Courses</span></h2>
             <p class="text-lg mb-8 max-w-2xl mx-auto">From Swahili to Chinese, our immersive courses are designed for all levels, blending cultural insights with practical skills.</p>
@@ -58,18 +71,190 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
+    <!-- Study Programs Section -->
+<!-- <section id="study-programs" class="py-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+      Our <span class="text-blue-900">Study Programs</span>
+    </h2>
+   -->
+    <!-- Study Program Table -->
+<section id="program" class="py-16 bg-gradient-to-b from-blue-50 to-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-blue-900">
+      Our Study<span class="text-blue-600">  Programs</span>
+    </h2>
+      <p class="text-lg mb-12 max-w-3xl mx-auto">
+      Choose a program that fits your schedule - whether you prefer regular, intensive, or super intensive classes, we’ve got you covered.
+    </p>
+
+
+    <div class="overflow-x-auto shadow-xl rounded-2xl bg-white border border-blue-100">
+      <table class="min-w-full text-sm md:text-base text-gray-700">
+        <thead class="bg-gradient-to-r from-blue-900 to-blue-700 text-white uppercase tracking-wider">
+          <tr>
+            <th class="px-6 py-4 text-left rounded-tl-2xl">Program</th>
+            <th class="px-6 py-4 text-left">Course Duration</th>
+            <th class="px-6 py-4 text-left">Hours / Day</th>
+            <th class="px-6 py-4 text-left">Hours / Week</th>
+            <th class="px-6 py-4 text-left">Months</th>
+            <th class="px-6 py-4 text-left rounded-tr-2xl">Monthly Fees</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-blue-100">
+          <tr class="hover:bg-blue-50 transition-all duration-200">
+            <td class="px-6 py-4 font-semibold text-blue-900">Regular</td>
+            <td class="px-6 py-4">96 Hours</td>
+            <td class="px-6 py-4">1 Hour</td>
+            <td class="px-6 py-4">4 Hours</td>
+            <td class="px-6 py-4">5 Months</td>
+            <td class="px-6 py-4 font-semibold text-blue-800">Kshs. 4,800/=</td>
+          </tr>
+          <tr class="hover:bg-blue-50 transition-all duration-200">
+            <td class="px-6 py-4 font-semibold text-blue-900">Intensive</td>
+            <td class="px-6 py-4">96 Hours</td>
+            <td class="px-6 py-4">2 Hours</td>
+            <td class="px-6 py-4">8 Hours</td>
+            <td class="px-6 py-4">3 Months</td>
+            <td class="px-6 py-4 font-semibold text-blue-800">Kshs. 9,600/=</td>
+          </tr>
+          <tr class="hover:bg-blue-50 transition-all duration-200">
+            <td class="px-6 py-4 font-semibold text-blue-900">Super Intensive</td>
+            <td class="px-6 py-4">96 Hours</td>
+            <td class="px-6 py-4">3 Hours</td>
+            <td class="px-6 py-4">12 Hours</td>
+            <td class="px-6 py-4">2 Months</td>
+            <td class="px-6 py-4 font-semibold text-blue-800">Kshs. 14,400/=</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-center text-gray-600 mt-6 italic">
+      *All programs include access to online resources and conversation practice sessions.*
+    </p>
+  </div>
+</section>
+
+<!-- Languages Offered -->
+<div class="mt-6">
+  <h3 class="text-2xl font-bold mb-8 text-blue-900 text-center">Language Courses Offered</h3>
+
+  <!-- Flex container for both boxes -->
+  <div class="flex flex-col md:flex-row gap-6 items-stretch">
+    
+    <!-- First Group (wider box) -->
+    <div class="md:w-2/3 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between">
+      <div>
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 text-gray-800 mb-4 font-semibold">
+          <p>Arabic</p>
+          <p>Chinese</p>
+          <p>English</p>
+          <p>French</p>
+          <p>German</p>
+          <p>Italian</p>
+          <p>Japanese</p>
+          <p>Kiswahili</p>
+          <p>Spanish</p>
+          <p>Local Languages</p>
+        </div>
+      </div>
+      <h4 class="text-lg font-semibold text-blue-900 mt-4 text-center">Tuition Fees: Kshs. 28,800/= per level</h4>
+    </div>
+
+    <!-- Second Group (narrower box) -->
+    <div class="md:w-1/3 bg-gray-50 p-6 rounded-lg shadow-md border border-gray-200 flex flex-col justify-between">
+      <div>
+        <div class="grid grid-cols-2 gap-3 text-gray-800 mb-4 font-semibold">
+          <p>Dutch</p>
+          <p>Korean</p>
+          <p>Portuguese</p>
+          <p>Russian</p>
+          <p>Turkish</p>
+        </div>
+      </div>
+      <h4 class="text-lg font-semibold text-blue-900 mt-4 text-center">Tuition Fees: Kshs. 48,000/= per level</h4>
+    </div>
+
+  </div>
+</div>
+
+
+
+     <!-- Proficiency Levels (Uptrend - Fixed Layout, Line Positioned Below Cards) -->
+<section id="proficiency" class="py-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-blue-900">
+      Proficiency Levels
+    </h2>
+    <p class="text-lg text-gray-700 mb-12 max-w-2xl mx-auto">
+      Progress through six stages — from beginner (A1) to mastery (C2) — and achieve full command of your chosen language.
+    </p>
+
+    <!-- Uptrend Staircase Layout -->
+    <div class="relative flex flex-col md:flex-row justify-center items-end gap-6 max-w-5xl mx-auto pb-16">
+
+      <!-- A1 -->
+      <div class="bg-gray-100 border border-gray-300 rounded-xl shadow-md p-4 w-36 hover:bg-blue-50 transition transform md:translate-y-24">
+        <h3 class="text-blue-900 font-bold text-xl">A1</h3>
+        <p class="text-sm text-gray-700">Basic 1</p>
+      </div>
+
+      <!-- A2 -->
+      <div class="bg-gray-100 border border-gray-300 rounded-xl shadow-md p-4 w-36 hover:bg-blue-50 transition transform md:translate-y-20">
+        <h3 class="text-blue-900 font-bold text-xl">A2</h3>
+        <p class="text-sm text-gray-700">Basic 2</p>
+      </div>
+
+      <!-- B1 -->
+      <div class="bg-gray-100 border border-gray-300 rounded-xl shadow-md p-4 w-36 hover:bg-blue-50 transition transform md:translate-y-14">
+        <h3 class="text-blue-900 font-bold text-xl">B1</h3>
+        <p class="text-sm text-gray-700">Intermediate 1</p>
+      </div>
+
+      <!-- B2 -->
+      <div class="bg-gray-100 border border-gray-300 rounded-xl shadow-md p-4 w-36 hover:bg-blue-50 transition transform md:translate-y-8">
+        <h3 class="text-blue-900 font-bold text-xl">B2</h3>
+        <p class="text-sm text-gray-700">Intermediate 2</p>
+      </div>
+
+      <!-- C1 -->
+      <div class="bg-gray-100 border border-gray-300 rounded-xl shadow-md p-4 w-36 hover:bg-blue-50 transition transform md:translate-y-4">
+        <h3 class="text-blue-900 font-bold text-xl">C1</h3>
+        <p class="text-sm text-gray-700">Advanced 1</p>
+      </div>
+
+      <!-- C2 -->
+      <div class="bg-gray-100 border border-gray-300 rounded-xl shadow-md p-4 w-36 hover:bg-blue-50 transition transform md:translate-y-0">
+        <h3 class="text-blue-900 font-bold text-xl">C2</h3>
+        <p class="text-sm text-gray-700">Advanced 2</p>
+      </div>
+
+      <!-- Horizontal Line + Arrow (Shifted Down) -->
+      <!-- <div class="absolute -bottom-10 left-0 right-0 h-1 bg-blue-900 rounded-full"></div>
+      <div class="absolute right-0 -bottom-8 w-0 h-0 border-t-[10px] border-t-transparent border-l-[16px] border-l-blue-900 border-b-[10px] border-b-transparent"></div> -->
+    </div>
+
+    <p class="mt-10 text-sm text-gray-600 italic">
+      Each level builds on the previous one — guiding you from understanding to fluency and confidence.
+    </p>
+  </div>
+</section>
+
+</section>
+
 
     <!-- Global Reach Section -->
     <section class="py-16 bg-blue-50">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Global Reach</span></h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto">Based in Nairobi, we connect you to a world of languages, offering online and in-person classes to students globally.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="relative">
+            <p class="text-lg mb-8 max-w-2xl mx-auto"> We connect you to a world of languages, offering online and in-person classes to students globally.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- <div class="relative">
                     <img src="img/building-1.jpg" alt="Nairobi Campus" class="w-full h-64 object-cover rounded-lg">
                     <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-bold">Nairobi</div>
-                </div>
+                </div> -->
                 <div class="relative">
                     <img src="img/online.jpeg" alt="Online Learning" class="w-full h-64 object-cover rounded-lg">
                     <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-xl font-bold">Online</div>
@@ -83,29 +268,45 @@
     </section>
 
     <!-- Facilities Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Our <span class="text-blue-900">Facilities</span></h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto">Learn in a supportive environment with modern classrooms and cultural resources in Nairobi.</p>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="img/langaugelab.jpeg" alt="Language Lab" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Language Labs</h3>
-                    <p>State-of-the-art labs with audio-visual tools for immersive language practice.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="img/cultural-center.jpg" alt="Cultural Center" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Cultural Center</h3>
-                    <p>Explore Kenyan and global cultures through workshops and events.</p>
-                </div>
-                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="img/overlay.jpg" alt="Study Lounge" class="w-full h-48 object-cover rounded-lg mb-4">
-                    <h3 class="text-xl font-semibold mb-2">Study Lounge</h3>
-                    <p>Quiet, modern spaces for group study and conversation practice.</p>
-                </div>
-            </div>
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      Our <span class="text-blue-900">Facilities</span>
+    </h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto">
+      Learn in a supportive environment with modern classrooms and cultural resources in Nairobi.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+      <!-- 1️⃣ Language Labs -->
+      <div class="md:col-span-1 bg-gray-100 p-6 rounded-lg shadow-md">
+        <img src="img/langaugelab.jpeg" alt="Language Lab" class="w-full h-80 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Language Labs</h3>
+        <p>State-of-the-art labs with audio-visual tools for immersive language practice.</p>
+      </div>
+
+      <!-- 2️⃣ Cultural Center (Wider, with 4 images) -->
+      <div class="md:col-span-3 bg-gray-100 p-6 rounded-lg shadow-md">
+        <div class="grid grid-cols-2 gap-4 mb-4">
+          <img src="img/french.jpeg" alt="Cultural Event 1" class="w-full h-40 object-cover rounded-lg">
+          <img src="img/spanish.jpeg" alt="Cultural Event 2" class="w-full h-40 object-cover rounded-lg">
+          <img src="img/german.jpeg" alt="Cultural Event 3" class="w-full h-40 object-cover rounded-lg">
+          <img src="img/arabic.jpeg" alt="Cultural Event 4" class="w-full h-40 object-cover rounded-lg">
         </div>
-    </section>
+        <h3 class="text-xl font-semibold mb-2">Cultural Center</h3>
+        <p>Explore Kenyan and global cultures through workshops and events.</p>
+      </div>
+
+      <!-- 3️⃣ Study Lounge -->
+      <div class="md:col-span-1 bg-gray-100 p-6 rounded-lg shadow-md">
+        <img src="img/overlay.jpg" alt="Study Lounge" class="w-full h-80 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold mb-2">Study Lounge</h3>
+        <p>Quiet, modern spaces for group study and conversation practice.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-16 bg-blue-50">
@@ -114,33 +315,33 @@
             <p class="text-lg mb-8 max-w-2xl mx-auto">Hear from our learners about their transformative language journeys.</p>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="img/profile-1.jpg" alt="Student" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="italic mb-4">"Learning Swahili at Kenya Language Academy opened doors to connect with my Kenyan roots!"</p>
-                    <span class="block font-semibold">Amina J., Nairobi</span>
+                    <img src="img/arab.jpeg" alt="Student" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="italic mb-4">Learning Swahili at Kenya Language Academy opened doors to connect with my Kenyan roots!</p>
+                    <span class="block font-semibold">Abdul Rahman, Afghanistan</span>
                     <div class="text-yellow-400">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="img/profile-1.jpg" alt="Student" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="italic mb-4">"The French course was engaging, and the cultural workshops made it so much fun!"</p>
-                    <span class="block font-semibold">James K., Online Learner</span>
+                    <img src="img/chinese.jpeg" alt="Student" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="italic mb-4">The English course was engaging, and the cultural workshops made it so much fun!</p>
+                    <span class="block font-semibold">Wu Zetian, Beijing</span>
                     <div class="text-yellow-400">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
                     </div>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="img/profile-1.jpg" alt="Student" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="italic mb-4">"Thanks to the IELTS prep, I aced my exam and got into my dream university!"</p>
-                    <span class="block font-semibold">Sarah M., Mombasa</span>
+                    <img src="img/fm.jpeg" alt="Student" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="italic mb-4">Thanks to the NextGen Language Institute,the german course was amazing</p>
+                    <span class="block font-semibold">Victor Hugo, Paris</span>
                     <div class="text-yellow-400">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -164,17 +365,42 @@
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="text-blue-900">Us</span></h2>
-            <p class="text-lg mb-8 max-w-2xl mx-auto">Based in Nairobi, Kenya Language Academy is dedicated to bridging cultures through language. Our expert instructors and immersive programs empower students to communicate confidently and embrace global opportunities.</p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
-    </section>
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+      About <span class="text-blue-900">Us</span>
+    </h2>
+    <!-- <p class="text-lg mb-8 max-w-2xl mx-auto">
+      NextGen Language Academy is dedicated to bridging cultures through language.
+      Our expert instructors and immersive programs empower students to communicate confidently
+      and embrace global opportunities.
+    </p> -->
+
+    <!-- Vision Section -->
+    <div class="mt-10 max-w-2xl mx-auto bg-blue-50 border-l-4 border-blue-900 p-6 rounded-lg shadow-sm">
+      <h3 class="text-2xl font-semibold text-blue-900 mb-3">Our Vision</h3>
+      <p class="text-gray-700 leading-relaxed">
+        To create a world where language unites cultures and builds lasting connections.
+      </p>
+    </div>
+
+    <!-- Social Media Icons -->
+    <div class="flex justify-center space-x-6 mt-10">
+      <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400">
+        <i class="fa-brands fa-facebook"></i>
+      </a>
+      <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="#" class="text-blue-900 text-2xl hover:text-yellow-400">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-blue-50">
