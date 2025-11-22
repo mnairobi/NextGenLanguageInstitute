@@ -19,30 +19,44 @@
 </head>
 <body class="font-sans bg-gray-50 antialiased">
 
-<!-- Header Section -->
-<!-- <header class="bg-gradient-to-r from-blue-950 via-blue-900 to-indigo-900 text-white py-5 sticky top-0 z-50 shadow-2xl"> -->
- <header class="bg-blue-900 text-white py-4 sticky top-0 z-50 shadow-md">
-    <div class="container mx-auto flex justify-between items-center px-6">
-    <div class="flex flex-col">
-      <div class="flex items-center space-x-3">
-        <i class="fa-solid fa-language text-4xl text-yellow-400 drop-shadow"></i>
-        <span class="text-3xl font-extrabold tracking-tight">NextGen Language Institute</span>
-      </div>
-      <p class="text-sm opacity-90 mt-1">Every language is a new adventure</p>
+<!-- Header -->
+<header class="bg-blue-900 text-white sticky top-0 z-50 shadow-xl">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center space-x-3">
+            <i class="fa-solid fa-language text-3xl md:text-4xl text-yellow-400"></i>
+            <div>
+                <h1 class="text-xl md:text-2xl font-extrabold leading-tight">NextGen Language Institute</h1>
+                <p class="text-xs md:text-sm opacity-90">Every language is a new adventure</p>
+            </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-6 lg:space-x-8 text-sm lg:text-base font-medium">
+            <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+            <a href="#program" class="hover:text-yellow-400 transition">Courses</a>
+            <a href="#about" class="hover:text-yellow-400 transition">About</a>
+            <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+            <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+        </nav>
+        
+
+        <!-- Mobile Hamburger -->
+        <button id="menuBtn" class="md:hidden text-3xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </div>
 
-    <nav class="hidden md:flex space-x-8 text-lg font-medium" id="navItems">
-      <a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a>
-      <a href="#program" class="hover:text-yellow-400 transition duration-300">Courses</a>
-      <a href="#about" class="hover:text-yellow-400 transition duration-300">About Us</a>
-      <a href="#testimonials" class="hover:text-yellow-400 transition duration-300">Testimonials</a>
-      <a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact Us</a>
-    </nav>
-
-    <div class="md:hidden">
-      <i class="fa-solid fa-bars text-3xl cursor-pointer hover:text-yellow-400 transition" id="hamburgerIcon" onclick="showMenu()"></i>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-blue-950 bg-opacity-95 hidden flex-col items-center justify-center space-y-8 text-2xl font-bold z-50">
+        <button id="closeMenu" class="absolute top-8 right-8 text-4xl text-yellow-400">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a href="#home" class="hover:text-yellow-400 transition">Home</a>
+        <a href="#program" class="hover:text-yellow-400 transition">Courses</a>
+        <a href="#about" class="hover:text-yellow-400 transition">About Us</a>
+        <a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a>
+        <a href="#contact" class="hover:text-yellow-400 transition">Contact Us</a>
     </div>
-  </div>
 </header>
 
 <!-- Hero Section -->
@@ -190,52 +204,127 @@
   </div>
 </section>
 
-<!-- Proficiency Levels -->
-<section class="py-20 bg-gradient-to-b from-blue-50 to-white">
+
+
+<!-- Proficiency Levels – With Growing Bars (A1 → C2) -->
+<section class="py-20 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
   <div class="container mx-auto px-6 text-center">
     <h2 class="text-4xl md:text-5xl font-extrabold mb-6 gradient-text">Proficiency Levels</h2>
     <p class="text-lg text-gray-700 mb-16 max-w-2xl mx-auto">
       Progress through six stages — from beginner (A1) to mastery (C2) — and achieve full command of your chosen language.
     </p>
 
-    <div class="relative flex flex-col md:flex-row justify-center items-end gap-8 max-w-6xl mx-auto pb-24">
-      <div class="card-hover bg-white rounded-2xl shadow-xl p-8 w-40 md:w-48 h-48 md:h-64 border-t-8 border-blue-600 flex flex-col justify-center">
-        <h3 class="text-4xl font-black text-blue-900">A1</h3>
-        <p class="text-lg font-semibold text-gray-700">Basic 1</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-xl p-8 w-40 md:w-48 h-48 md:translate-y-[-2rem] border-t-8 border-blue-600">
-        <h3 class="text-4xl font-black text-blue-900">A2</h3>
-        <p class="text-lg font-semibold text-gray-700">Basic 2</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-xl p-8 w-40 md:w-48 h-48 md:translate-y-[-4rem] border-t-8 border-indigo-600">
-        <h3 class="text-4xl font-black text-indigo-900">B1</h3>
-        <p class="text-lg font-semibold text-gray-700">Intermediate 1</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-xl p-8 w-40 md:w-48 h-48 md:translate-y-[-6rem] border-t-8 border-indigo-700">
-        <h3 class="text-4xl font-black text-indigo-900">B2</h3>
-        <p class="text-lg font-semibold text-gray-700">Intermediate 2</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-xl p-8 w-40 md:w-48 h-48 md:translate-y-[-8rem] border-t-8 border-purple-700">
-        <h3 class="text-4xl font-black text-purple-900">C1</h3>
-        <p class="text-lg font-semibold text-gray-700">Advanced 1</p>
-      </div>
-      <div class="card-hover bg-white rounded-2xl shadow-2xl p-10 w-48 md:w-56 h-56 md:translate-y-[-10rem] border-t-8 border-yellow-500 ring-4 ring-yellow-200">
-        <h3 class="text-5xl font-black text-yellow-600 drop-shadow">C2</h3>
-        <p class="text-xl font-bold text-gray-800">Advanced 2</p>
+    <div class="relative flex flex-col md:flex-row justify-center items-end gap-6 md:gap-10 max-w-6xl mx-auto pb-32">
+      
+      <!-- A1 (smallest) -->
+      <div class="text-center group">
+        <div class="relative mb-6">
+          <div class="w-32 md:w-40 mx-auto bg-gray-200 rounded-t-2xl overflow-hidden shadow-inner">
+            <div class="bar-a1 h-16 bg-gradient-to-t from-blue-600 to-blue-500 rounded-t-2xl shadow-lg"></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-blue-600 card-hover">
+          <h3 class="text-4xl font-black text-blue-900">A1</h3>
+          <p class="text-lg font-semibold text-gray-700 mt-2">Basic 1</p>
+        </div>
       </div>
 
-      <div class="stair-line"></div>
-      <div class="stair-arrow"></div>
+      <!-- A2 -->
+      <div class="text-center group">
+        <div class="relative mb-6">
+          <div class="w-32 md:w-40 mx-auto bg-gray-200 rounded-t-2xl overflow-hidden shadow-inner">
+            <div class="bar-a2 h-24 bg-gradient-to-t from-blue-600 to-blue-500 rounded-t-2xl shadow-lg"></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-blue-600 card-hover">
+          <h3 class="text-4xl font-black text-blue-900">A2</h3>
+          <p class="text-lg font-semibold text-gray-700 mt-2">Basic 2</p>
+        </div>
+      </div>
+
+      <!-- B1 -->
+      <div class="text-center group">
+        <div class="relative mb-6">
+          <div class="w-32 md:w-40 mx-auto bg-gray-200 rounded-t-2xl overflow-hidden shadow-inner">
+            <div class="bar-b1 h-32 bg-gradient-to-t from-indigo-600 to-indigo-500 rounded-t-2xl shadow-lg"></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-indigo-600 card-hover">
+          <h3 class="text-4xl font-black text-indigo-900">B1</h3>
+          <p class="text-lg font-semibold text-gray-700 mt-2">Intermediate 1</p>
+        </div>
+      </div>
+
+      <!-- B2 -->
+      <div class="text-center group">
+        <div class="relative mb-6">
+          <div class="w-32 md:w-40 mx-auto bg-gray-200 rounded-t-2xl overflow-hidden shadow-inner">
+            <div class="bar-b2 h-40 bg-gradient-to-t from-indigo-700 to-indigo-600 rounded-t-2xl shadow-lg"></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-indigo-700 card-hover">
+          <h3 class="text-4xl font-black text-indigo-900">B2</h3>
+          <p class="text-lg font-semibold text-gray-700 mt-2">Intermediate 2</p>
+        </div>
+      </div>
+
+      <!-- C1 -->
+      <div class="text-center group">
+        <div class="relative mb-6">
+          <div class="w-32 md:w-40 mx-auto bg-gray-200 rounded-t-2xl overflow-hidden shadow-inner">
+            <div class="bar-c1 h-52 bg-gradient-to-t from-purple-700 to-purple-600 rounded-t-2xl shadow-lg"></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-xl p-6 border-t-8 border-purple-700 card-hover">
+          <h3 class="text-4xl font-black text-purple-900">C1</h3>
+          <p class="text-lg font-semibold text-gray-700 mt-2">Advanced 1</p>
+        </div>
+      </div>
+
+      <!-- C2 (tallest) -->
+      <div class="text-center group">
+        <div class="relative mb-6">
+          <div class="w-36 md:w-48 mx-auto bg-gray-200 rounded-t-2xl overflow-hidden shadow-inner ring-4 ring-yellow-300">
+            <!-- <div class="bar-c2 h-64 bg-gradient-to-t from-yellow-500 to-amber-400 rounded-t-2xl shadow-2xl"></div> -->
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-2xl p-8 border-t-8 border-yellow-500 ring-4 ring-yellow-200 card-hover scale-105">
+          <h3 class="text-5xl font-black text-yellow-600 drop-shadow-lg">C2</h3>
+          <p class="text-xl font-bold text-gray-800 mt-3">Mastery • Advanced 2</p>
+        </div>
+      </div>
+
+      <!-- Connecting line & arrow -->
+      <!-- <div class="absolute bottom-10 left-8 right-8 md:left-12 md:right-12 h-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-yellow-500 rounded-full"></div>
+      <div class="absolute bottom-6 right-10 md:right-16 text-yellow-500">
+        <i class="fa-solid fa-arrow-right text-5xl animate-pulse"></i>
+      </div> -->
     </div>
 
-    <p class="mt-20 text-lg italic text-gray-600 max-w-3xl mx-auto">
+    <p class="mt-24 text-lg italic text-gray-600 max-w-3xl mx-auto">
       Each level builds on the previous one — guiding you from understanding to fluency and confidence.
     </p>
   </div>
 </section>
 
-<!-- Global Reach, Facilities, Testimonials, CTA, About, Contact, Footer -->
-<!-- (All sections upgraded with modern cards, gradients, hover effects, better spacing — content 100% unchanged) -->
+<style>
+  .bar-a1, .bar-a2, .bar-b1, .bar-b2, .bar-c1, .bar-c2 {
+    animation: grow 2s ease-out forwards;
+    transform-origin: bottom;
+  }
+  @keyframes grow {
+    from { height: 0; }
+    to   { height: inherit; }
+  }
+  .card-hover {
+    transition: all 0.4s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  }
+</style>
+
 
 <!-- Global Reach -->
 <section class="py-20 bg-gradient-to-r from-indigo-50 to-blue-100">

@@ -1,29 +1,19 @@
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMenu = document.getElementById("closeMenu");
 
-// ================ MOBILE MENU TOGGLE (Perfect & Smooth) ================
-let hamburgerControl = false;
+// Open menu
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    mobileMenu.classList.add("flex");
+});
 
-function showMenu() {
-    const hamburgerIcon = document.getElementById("hamburgerIcon");
-    const navItems = document.getElementById("navItems");
+// Close menu
+closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    mobileMenu.classList.remove("flex");
+});
 
-    if (!hamburgerControl) {
-        // Open menu
-        hamburgerIcon.innerHTML = '<i class="fa-solid fa-xmark text-3xl"></i>';
-        navItems.classList.remove("hidden");
-        navItems.classList.add("flex", "flex-col", "absolute", "top-full", "left-0", "w-full", 
-                             "bg-gradient-to-b", "from-blue-950", "to-indigo-900", 
-                             "py-10", "shadow-2xl", "z-50");
-        navItems.querySelectorAll("a").forEach(link => {
-            link.classList.add("text-White", "text-2xl", "font-medium", "py-4", "hover:text-yellow-400", "transition");
-        });
-        hamburgerControl = true;
-    } else {
-        // Close menu
-        hamburgerIcon.innerHTML = '<i class="fa-solid fa-bars text-3xl"></i>';
-        navItems.classList.add("hidden");
-        hamburgerControl = false;
-    }
-}
 
 // ================ CONTACT FORM → SENDS TO YOUR GMAIL ================
 document.addEventListener("DOMContentLoaded", function () {
